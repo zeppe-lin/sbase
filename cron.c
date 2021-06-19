@@ -52,7 +52,7 @@ static sig_atomic_t quit;
 static TAILQ_HEAD(, ctabentry) ctabhead = TAILQ_HEAD_INITIALIZER(ctabhead);
 static TAILQ_HEAD(, jobentry) jobhead = TAILQ_HEAD_INITIALIZER(jobhead);
 static char *config = "/etc/crontab";
-static char *pidfile = "/var/run/crond.pid";
+static char *pidfile = "/var/run/cron.pid";
 static int nflag;
 
 static void
