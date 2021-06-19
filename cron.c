@@ -480,7 +480,7 @@ sighandler(int sig)
 static void
 usage(void)
 {
-	eprintf("usage: %s [-f file] [-n]\n", argv0);
+	eprintf("usage: %s [-f crontab] [-p pidfile] [-n]\n", argv0);
 }
 
 int
@@ -498,6 +498,9 @@ main(int argc, char *argv[])
 		break;
 	case 'f':
 		config = EARGF(usage());
+		break;
+	case 'p':
+		pidfile = EARGF(usage());
 		break;
 	default:
 		usage();
